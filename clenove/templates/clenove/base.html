@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -5,12 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skauti - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'clenove\styles.css' %}">
 </head>
 <body>
-    <ul>
+    <ul class="menu">
         <li><a href="{% url 'index' %}">Úvodní stránka</a></li>
         <li><a href="{% url 'seznam' %}">Seznam skautů</a></li>
-        <li><a href="{% url 'detail' 'fred' %}">Detail - později to smažeme</a></li>
     </ul>
     <h1>Tohle je naše aplikace o skautech...</h1>
     {% block content %}

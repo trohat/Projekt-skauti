@@ -3,5 +3,9 @@
 {% block title %}seznam skautů{% endblock %}
 
 {% block content %}
-<p>Tady bude za chvíli seznam našich skautů...</p>
+<ul>
+    {% for skaut in skauti %}
+        <li><a href="{{ skaut.get_absolute_url }}">{{ skaut }}</a></li>
+    {% endfor %}
+</ul>
 {% endblock %}
